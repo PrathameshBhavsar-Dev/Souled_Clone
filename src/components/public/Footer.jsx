@@ -4,7 +4,7 @@ import { FaFacebookF, FaInstagram, FaSnapchatGhost, FaTwitter ,FaMobileAlt } fro
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-100 text-gray-700 pt-10 ">
+    <footer className="bg-[#e6e7e8] text-gray-700 pt-10 ">
       {/* Top Red Banner */}
       <div className="bg-red-600 text-white text-center py-2 font-semibold">
         HOMEGROWN INDIAN BRAND
