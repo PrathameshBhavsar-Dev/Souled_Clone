@@ -47,7 +47,7 @@ function Navbar() {
 
           {/* Brand logo */}
           <div>
-            <img src="logo.png" className="h-12 w-28 pl-22"/>
+            <img src="logo.png" className="h-12 pl-22"/>
           </div>
 
           {/* RIGHT SECTION */}
