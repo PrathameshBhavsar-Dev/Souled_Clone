@@ -5,6 +5,7 @@ import Men from "./pages/Men";
 import Women from "./pages/Women";
 import Sneakers from "./pages/Sneakers";
 import Footer from "./components/public/Footer"
+import Categories from "./components/common/Categories";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
         <Route path="/women" element={<Women />} />
         <Route path="/sneakers" element={<Sneakers />} />
       </Routes>
+        <Categories/>
 
       <Footer/>
      

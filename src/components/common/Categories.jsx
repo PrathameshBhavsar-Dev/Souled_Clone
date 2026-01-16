@@ -93,3 +93,40 @@ function Categories() {
 }
 
 export default Categories;
+
+
+/*
+
+
+import {swiper, SwiperSlide} from 'swiper/react';
+import 'swiper/css';
+import{Navigation} from swiper/modules';
+import 'swiper/css/navigation';
+
+import slide1 from "../common/Categories.png";
+import slide2 from ../common/Categories.png";
+import slide3 from "../common/Categories.png";
+
+function New-collection() => {
+return(
+  <div      
+        modules={[Navigation]}
+        navigation
+        loop
+        className="w-full h-[500px]"
+>
+
+<swiper>
+<swiperSlide><img src={slide1} className="w-full h-full object-cover"></swiperslide>
+<swiperSlide><img src={slide2} className="w-full h-full object-cover"></swiperslide>
+<swiperSlide><img src={slide3}>className="w-full h-full object-cover"</swiperslide>
+
+</swiper>
+
+  </div> 
+
+);
+
+}
+export default New-collection;
+*/
