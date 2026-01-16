@@ -1,5 +1,5 @@
+import React from "react";      
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
-
 import Navbar from "./components/public/Navbar";
 import Men from "./pages/Men";
 import Women from "./pages/Women";
