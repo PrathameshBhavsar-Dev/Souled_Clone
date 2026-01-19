@@ -19,4 +19,9 @@
 .no-scrollbar::-webkit-scrollbar { display: none; }
 .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
 
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
 
