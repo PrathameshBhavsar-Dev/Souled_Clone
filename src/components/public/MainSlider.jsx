@@ -31,9 +31,9 @@ function MainSlider({ activeCategory }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-  const id = setTimeout(() => setCurrentIndex(0), 0);
-  return () => clearTimeout(id);
-}, [activeCategory]);
+    const id = setTimeout(() => setCurrentIndex(0), 0);
+    return () => clearTimeout(id);
+  }, [activeCategory]);
 
   useEffect(() => {
     if (images.length === 0) return;
@@ -45,15 +45,19 @@ function MainSlider({ activeCategory }) {
     return () => clearInterval(interval);
   }, [images]);
 
-  const prevSlide = () => setCurrentIndex(prev => prev === 0 ? images.length - 1 : prev - 1);
-  const nextSlide = () => setCurrentIndex(prev => (prev + 1) % images.length);
+  const prevSlide = () =>
+    setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
+  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % images.length);
 
   if (images.length === 0) return null;
 
   return (
     <div className="relative w-full h-[220px] sm:h-[320px] md:h-[420px] lg:h-[520px] overflow-hidden">
       {/* Slide Track */}
-      <div className="flex h-full transition-transform duration-700 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+      <div
+        className="flex h-full transition-transform duration-700 ease-in-out"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
         {images.map((img, idx) => (
           <img
             key={idx}
@@ -65,10 +69,16 @@ function MainSlider({ activeCategory }) {
       </div>
 
       {/* Arrows */}
-      <button onClick={prevSlide} className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 text-white text-lg sm:text-xl md:text-2xl p-2 sm:p-3 rounded-full hover:bg-white hover:text-black transition shadow-sm">
+      <button
+        onClick={prevSlide}
+        className="absolute left-3 sm:left-5 top-1/2 -translate-y-1/2 text-white text-lg sm:text-xl md:text-2xl p-2 sm:p-3 rounded-full hover:bg-white hover:text-black transition shadow-sm"
+      >
         <FaChevronLeft />
       </button>
-      <button onClick={nextSlide} className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 text-white text-lg sm:text-xl md:text-2xl p-2 sm:p-3 rounded-full hover:bg-white hover:text-black transition shadow-sm">
+      <button
+        onClick={nextSlide}
+        className="absolute right-3 sm:right-5 top-1/2 -translate-y-1/2 text-white text-lg sm:text-xl md:text-2xl p-2 sm:p-3 rounded-full hover:bg-white hover:text-black transition shadow-sm"
+      >
         <FaChevronRight />
       </button>
 
@@ -78,7 +88,9 @@ function MainSlider({ activeCategory }) {
           <div
             key={idx}
             onClick={() => setCurrentIndex(idx)}
-            className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full cursor-pointer transition-all ${currentIndex === idx ? "bg-red-500 scale-110" : "bg-gray-300"}`}
+            className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full cursor-pointer transition-all ${
+              currentIndex === idx ? "bg-red-500 scale-110" : "bg-gray-300"
+            }`}
           />
         ))}
       </div>
