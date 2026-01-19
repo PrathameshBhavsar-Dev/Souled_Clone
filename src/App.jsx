@@ -1,16 +1,12 @@
-import React from "react";      
-import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import React from "react";
 import Navbar from "./components/public/Navbar";
-import Men from "./pages/Men";
-import Women from "./pages/Women";
-import Sneakers from "./pages/Sneakers";
 import Footer from "./components/public/Footer"
+import AppRoutes from "./routes/AppRoutes"
 import Categories from "./components/common/Categories";
 
-
-function App() {
+const App = () => {
   return (
-    <Router>
+    <>
       <Navbar />
 
       <Routes>
@@ -22,7 +18,6 @@ function App() {
         <Route path="/women" element={<Women />} />
         <Route path="/sneakers" element={<Sneakers />} />
       </Routes>
-        <Categories/>
 
       <Footer/>
      
