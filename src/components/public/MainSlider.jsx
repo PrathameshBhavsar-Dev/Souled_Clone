@@ -52,6 +52,8 @@ function MainSlider({ activeCategory }) {
   if (images.length === 0) return null;
 
   return (
+  <div className="w-full">
+    {/* Slider */}
     <div className="relative w-full h-[220px] sm:h-[320px] md:h-[420px] lg:h-[520px] overflow-hidden">
       {/* Slide Track */}
       <div
@@ -81,21 +83,23 @@ function MainSlider({ activeCategory }) {
       >
         <FaChevronRight />
       </button>
-
-      {/* Dots */}
-      <div className="absolute bottom-3 sm:bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
-        {images.map((_, idx) => (
-          <div
-            key={idx}
-            onClick={() => setCurrentIndex(idx)}
-            className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full cursor-pointer transition-all ${
-              currentIndex === idx ? "bg-red-500 scale-110" : "bg-gray-300"
-            }`}
-          />
-        ))}
-      </div>
     </div>
-  );
+
+    {/* Dots BELOW image */}
+    <div className="flex justify-center gap-2 mt-3 sm:mt-4">
+      {images.map((_, idx) => (
+        <div
+          key={idx}
+          onClick={() => setCurrentIndex(idx)}
+          className={`w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full cursor-pointer transition-all ${
+            currentIndex === idx ? "bg-red-500 scale-110" : "bg-gray-300"
+          }`}
+        />
+      ))}
+    </div>
+  </div>
+);
+
 }
 
 export default MainSlider;

@@ -1,5 +1,6 @@
 // Footer.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import {
   FaFacebookF,
@@ -7,6 +8,7 @@ import {
   FaSnapchatGhost,
   FaTwitter,
   FaMobileAlt,
+  FaRegCopyright,
 } from "react-icons/fa";
 
 const Footer = () => {
@@ -23,14 +25,14 @@ const Footer = () => {
       </div>
 
       {/* Main Section */}
-      <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
+      <div className="max-w-6xl mx-auto px-6 py-8 grid grid-cols-2 md:grid-cols-4 gap-6">
         {/* NEED HELP */}
         <div>
           <h3 className="text-red-600 font-bold mb-4">NEED HELP</h3>
           <ul className="space-y-1 text-sm">
             {[
-              "Contact Us",
-              "Track Order",
+              <Link to="/contact">Contact</Link>,
+              <Link to="/track">Track</Link>,
               "Returns & Refunds",
               "FAQs",
               "My Account",
@@ -102,7 +104,7 @@ const Footer = () => {
                 >
                   {item}
                 </li>
-              )
+              ),
             )}
           </ul>
         </div>
@@ -180,7 +182,7 @@ const Footer = () => {
             className="bg-[#e6e7e8] border px-4 py-3 flex justify-between items-center text-sm cursor-pointer"
           >
             <h2 className="text-red-600 font-semibold tracking-wide uppercase">
-              ARTIST'S DETAILS
+              WHO WE ARE
             </h2>
 
             <span className="text-red-600 text-xl font-bold">
@@ -368,6 +370,11 @@ const Footer = () => {
           <img src="/footer_img/del.png" className="h-8" />
           <img src="/footer_img/xpress.png" className="h-8" />
         </div>
+      </div>
+      <div>
+        <p className="justify-center text-center">
+          <FaRegCopyright />{" "}
+        </p>
       </div>
     </footer>
   );
