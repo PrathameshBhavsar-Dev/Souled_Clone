@@ -179,18 +179,23 @@ export default function ImageScroller() {
   ];
 
   const scrollLeft = () => {
-    scrollRef.current.scrollBy({
-      left: -window.innerWidth,
-      behavior: "smooth"
-    });
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: -scrollRef.current.clientWidth,
+        behavior: "smooth"
+      });
+    }
   };
 
   const scrollRight = () => {
-    scrollRef.current.scrollBy({
-      left: window.innerWidth,
-      behavior: "smooth"
-    });
+    if (scrollRef.current) {
+      scrollRef.current.scrollBy({
+        left: scrollRef.current.clientWidth,
+        behavior: "smooth"
+      });
+    }
   };
+
 
   return (
     <div className="w-full px-4 md:px-8 py-6 md:py-10">
@@ -232,15 +237,14 @@ export default function ImageScroller() {
             <div
               key={index}
               className="
-    sm:w-1/2
-    lg:w-1/4
+    w-1/4
     flex-shrink-0
     text-center
-    px-[5px]
+    px-2
   "
             >
 
-              <div className="mx-[5px] relative w-[300px] h-[420px] group">
+              <div className="mx-auto relative w-[300px] h-[420px] group">
 
                 <img
                   src={img.normal}
@@ -267,8 +271,6 @@ export default function ImageScroller() {
                 />
 
               </div>
-
-
 
               <div className="mt-3 text-left px-5">
                 <p className="text-xs md:text-sm font-semibold text-gray-900">

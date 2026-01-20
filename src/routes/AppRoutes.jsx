@@ -5,10 +5,6 @@ import Women from "../pages/Women";
 import Sneakers from "../pages/Sneakers";
 
 import ProductDetailsPage from "../pages/ProductDetailsPage";
-
-
-
-
 function App() {
     return (
         <Routes>
@@ -16,13 +12,7 @@ function App() {
             <Route path="/men" element={<Men />} />
             <Route path="/women" element={<Women />} />
             <Route path="/sneakers" element={<Sneakers />} />
-<Route path="/product/:id" element={<ProductDetailsPage />} />
-
-
-           
-
-
-                   
+            <Route path="/product/:id" element={<ProductDetailsPage />} />
         </Routes>
     );
 }

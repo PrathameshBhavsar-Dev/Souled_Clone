@@ -2,10 +2,12 @@ import React from "react";
 import MainSlider from "../components/public/MainSlider";
 import Filters from "../components/common/Filters";
 import Categories from "../components/common/Categories";
-
+import { womenFilters } from "../data/womenFilters";
+import { womenCategories } from "../data/womenCategories";
 import Card from "../components/common/Card";
 import { products } from "../data/products";
-export default function Women() {
+
+const Women = () => {
   console.log(products);
 
   const womenProducts = products.filter(
@@ -15,8 +17,10 @@ export default function Women() {
   console.log("Filtered:", womenProducts);
 
   return (
-    <>
+    <div>
       <MainSlider activeCategory="WOMEN" />
+      <Categories data={womenCategories} columns={3} />
+      <Filters filters={womenFilters} />
 
       <h1 className="text-xl p-5">
         Total Products: {womenProducts.length}
@@ -27,6 +31,8 @@ export default function Women() {
           <Card key={item.id} product={item} />
         ))}
       </div>
-    </>
+    </div>
   );
-}
+};
+
+export default Women; 

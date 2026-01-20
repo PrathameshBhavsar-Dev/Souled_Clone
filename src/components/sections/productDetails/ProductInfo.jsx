@@ -17,9 +17,6 @@ const ArrowIcon = ({ open }) => (
 export default function ProductInfo() {
   const [openSection, setOpenSection] = useState("details");
 
-
-
-
   return (
     <div className="max-w-10xl mx-8 px-6 py-10">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
@@ -85,24 +82,24 @@ export default function ProductInfo() {
             <button className="bg-orange-500 text-white px-6 py-3 rounded-md font-semibold">
               ADD TO CART
             </button>
-           <button className="border border-teal-600 text-teal-600 px-6 py-3 rounded-md font-semibold flex items-center gap-2">
-  
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"></path>
-  </svg>
+            <button className="border border-teal-600 text-teal-600 px-6 py-3 rounded-md font-semibold flex items-center gap-2">
 
-  ADD TO WISHLIST
-</button>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.8 1-1a5.5 5.5 0 0 0 0-7.6z"></path>
+              </svg>
+
+              ADD TO WISHLIST
+            </button>
 
           </div>
 
@@ -171,27 +168,27 @@ export default function ProductInfo() {
             </p>
           </div>
 
-         <div className="mt-4 bg-teal-100 px-4 py-3 rounded-md flex items-center gap-3">
-  
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="w-6 h-6 text-teal-700"
-    fill="none"
-    viewBox="0 0 24 24"
-    stroke="currentColor"
-    strokeWidth="2"
-  >
-    <path
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      d="M12 8v13m-7-9h14M5 12V7a2 2 0 012-2h10a2 2 0 012 2v5M5 12h14v8a2 2 0 01-2 2H7a2 2 0 01-2-2v-8zM12 5a3 3 0 00-3-3c-1.5 0-3 1.5-3 3s1.5 3 3 3h3V5zm0 0a3 3 0 013-3c1.5 0 3 1.5 3 3s-1.5 3-3 3h-3V5z"
-    />
-  </svg>
+          <div className="mt-4 bg-teal-100 px-4 py-3 rounded-md flex items-center gap-3">
 
-  <p className="font-medium">
-    You'll earn ₹99.90 as TSS Points on this purchase
-  </p>
-</div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="w-6 h-6 text-teal-700"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              strokeWidth="2"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 8v13m-7-9h14M5 12V7a2 2 0 012-2h10a2 2 0 012 2v5M5 12h14v8a2 2 0 01-2 2H7a2 2 0 01-2-2v-8zM12 5a3 3 0 00-3-3c-1.5 0-3 1.5-3 3s1.5 3 3 3h3V5zm0 0a3 3 0 013-3c1.5 0 3 1.5 3 3s-1.5 3-3 3h-3V5z"
+              />
+            </svg>
+
+            <p className="font-medium">
+              You'll earn ₹99.90 as TSS Points on this purchase
+            </p>
+          </div>
 
 
           <div className="mt-6 border rounded-md">
