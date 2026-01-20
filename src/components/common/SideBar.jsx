@@ -42,7 +42,6 @@ const SideBar = ({ isOpen, onClose }) => {
   const [bottomwearOpen, setBottomwearOpen] = useState(false);
   const [shopByFitBottomOpen, setShopByFitBottomOpen] = useState(false);
   const [accessoriesOpen, setAccessoriesOpen] = useState(false);
-  const [currentSlide, setCurrentSlide] = useState(0);
 
   const categories = {
     MEN: [
