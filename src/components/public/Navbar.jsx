@@ -39,7 +39,7 @@ function Navbar() {
                     hover:after:scale-x-100
                     ${
                       activeCategory === item
-                        ? "after:scale-x-100 text-red-600"
+                        ? "after:scale-x-100 "
                         : ""
                     }`}
                 >
