@@ -1,3 +1,4 @@
+import React from "react";
 import MainSlider from "../components/public/MainSlider";
 
 import Card from "../components/common/Card";

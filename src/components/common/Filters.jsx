@@ -1,21 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-const filters = [
-  "All",
-  "Hoodies",
-  "Jackets",
-  "Oversized T-Shirts",
-  "Shirts",
-  "Polos",
-  "Men Pants",
-  "Men Jeans",
-  "Women T-Shirts",
-  "Men High Top Sneakers",
-  "Men Low Top Sneakers",
-];
-
-function Filters() {
-  const [active, setActive] = useState("All");
+const Filters = ({ filters }) => {
+  const [active, setActive] = useState(filters[0] || "All");
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -38,7 +24,7 @@ function Filters() {
                 ${
                   active === item
                     ? "bg-black text-white"
-                    : "bg-white text-[#5e5e5f] border border-[#d1d5db] "
+                    : "bg-white text-[#5e5e5f] border border-[#d1d5db]"
                 }`}
             >
               {item}
@@ -48,6 +34,6 @@ function Filters() {
       </div>
     </div>
   );
-}
+};
 
 export default Filters;

@@ -1,4 +1,8 @@
+import React from "react";
 import MainSlider from "../components/public/MainSlider";
+import Categories from "../components/common/Categories";
+import NewCollection from "../components/sections/men/Newcollection";
+import Filters from "../components/common/Filters";
 
 import Card from "../components/common/Card";
 import { products } from "../data/products";

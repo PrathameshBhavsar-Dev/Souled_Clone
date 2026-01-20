@@ -139,3 +139,25 @@ export default function ProductInfo({ product }) {
     </div>
   );
 }
+
+.categories-swiper .swiper-pagination-bullet {
+  width: 8px;
+  height: 8px;
+  background: #999;
+  opacity: 1;
+  border-radius: 50%;
+}
+
+.categories-swiper .swiper-pagination-bullet-active {
+  background: #000;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+
+
