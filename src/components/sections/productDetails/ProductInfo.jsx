@@ -171,12 +171,28 @@ export default function ProductInfo() {
             </p>
           </div>
 
-          <div className="mt-4 bg-teal-100 px-4 py-3 rounded-md flex items-center gap-3">
-            🎁
-            <p className="font-medium">
-              You'll earn ₹99.90 as TSS Points on this purchase
-            </p>
-          </div>
+         <div className="mt-4 bg-teal-100 px-4 py-3 rounded-md flex items-center gap-3">
+  
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    className="w-6 h-6 text-teal-700"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke="currentColor"
+    strokeWidth="2"
+  >
+    <path
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      d="M12 8v13m-7-9h14M5 12V7a2 2 0 012-2h10a2 2 0 012 2v5M5 12h14v8a2 2 0 01-2 2H7a2 2 0 01-2-2v-8zM12 5a3 3 0 00-3-3c-1.5 0-3 1.5-3 3s1.5 3 3 3h3V5zm0 0a3 3 0 013-3c1.5 0 3 1.5 3 3s-1.5 3-3 3h-3V5z"
+    />
+  </svg>
+
+  <p className="font-medium">
+    You'll earn ₹99.90 as TSS Points on this purchase
+  </p>
+</div>
+
 
           <div className="mt-6 border rounded-md">
             <button

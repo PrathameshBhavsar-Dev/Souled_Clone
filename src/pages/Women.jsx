@@ -1,5 +1,29 @@
 import MainSlider from "../components/public/MainSlider";
 
+import Card from "../components/common/Card";
+import { products } from "../data/products";
 export default function Women() {
-  return <MainSlider activeCategory="WOMEN" />;
+  console.log(products);
+
+  const womenProducts = products.filter(
+    (p) => p.category === "women"
+  );
+
+  console.log("Filtered:", womenProducts);
+
+  return (
+    <>
+      <MainSlider activeCategory="WOMEN" />
+
+      <h1 className="text-xl p-5">
+        Total Products: {womenProducts.length}
+      </h1>
+
+      <div className="flex flex-wrap gap-4 p-5">
+        {womenProducts.map((item) => (
+          <Card key={item.id} product={item} />
+        ))}
+      </div>
+    </>
+  );
 }

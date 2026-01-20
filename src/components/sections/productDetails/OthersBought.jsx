@@ -240,21 +240,34 @@ export default function ImageScroller() {
   "
             >
 
-              <div className="mx-[5px]">
+              <div className="mx-[5px] relative w-[300px] h-[420px] group">
+
                 <img
                   src={img.normal}
-                  onMouseOver={e => e.currentTarget.src = img.hover}
-                  onMouseOut={e => e.currentTarget.src = img.normal}
                   className="
-      w-[300px] 
-      h-[420px]
+      absolute inset-0
+      w-full h-full
       object-cover
-     
-      cursor-pointer
-transition-all duration-700 ease-in-out
+      transition-opacity duration-1000 ease-in-out
+      opacity-100
+      group-hover:opacity-0
     "
                 />
+
+                <img
+                  src={img.hover}
+                  className="
+      absolute inset-0
+      w-full h-full
+      object-cover
+      transition-opacity duration-1000 ease-in-out
+      opacity-0
+      group-hover:opacity-100
+    "
+                />
+
               </div>
+
 
 
               <div className="mt-3 text-left px-5">
