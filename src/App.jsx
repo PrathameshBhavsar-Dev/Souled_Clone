@@ -1,14 +1,17 @@
-import React from 'react'
-import AppRoutes from './routes/AppRoutes'
-import Fav from './pages/Fav'
+import React from "react";
+import Navbar from "./components/public/Navbar";
+import Footer from "./components/public/Footer"
+import AppRoutes from "./routes/AppRoutes"
+
 
 const App = () => {
   return (
-    <div>
-      <AppRoutes/>
-      
-    </div>
-  )
+    <>
+      <Navbar />
+      <AppRoutes />
+      <Footer />
+    </>
+  );
 }
 
-export default App
+export default App;
