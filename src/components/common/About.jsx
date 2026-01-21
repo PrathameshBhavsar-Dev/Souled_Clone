@@ -2,7 +2,7 @@ const About = () => {
   return (
     <div className="w-full overflow-x-hidden">
 
-      {/* ===== TOP MESSAGE BAR ===== */}
+      
       <div className="bg-[#278a8f] mx-3 px-4 py-10">
         <p className="text-white text-center text-sm max-w-5xl mx-auto hover:underline decoration-white">
           Our About Us page would like to thank you from the bottom of its heart
@@ -12,7 +12,7 @@ const About = () => {
         </p>
       </div>
 
-      {/* ===== SECTION 1 ===== */}
+      
       <div className="px-4 py-12 mx-3">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 items-center md:items-start">
           <img
@@ -37,7 +37,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* ===== SECTION 2 (GRAY) ===== */}
+  
       <div className="bg-[#f0f0f0] px-4 py-12 mx-3">
         <div className="max-w-6xl mx-auto flex flex-col-reverse md:flex-row gap-10 items-center md:items-start">
           <div className="max-w-xl text-center md:text-left">
@@ -60,7 +60,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* ===== WHY SOULED STORE ===== */}
+     
       <div className="bg-[#278a8f] mx-3 px-4 py-14">
         <div className="max-w-5xl mx-auto text-center text-white">
           <h2 className="text-lg font-bold mb-4">
@@ -76,7 +76,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* ===== ILLUSTRATION ===== */}
+      
       <div className="px-4 py-12 flex justify-center mx-3">
         <img
           src="/About_img/img3.png"
@@ -85,7 +85,7 @@ const About = () => {
         />
       </div>
 
-      {/* ===== TEAM ===== */}
+    
       <div className="bg-[#278a8f] mx-3 px-4 py-14">
         <div className="max-w-5xl mx-auto text-center text-white">
           <h2 className="text-lg font-bold mb-4">The Team</h2>
@@ -99,7 +99,7 @@ const About = () => {
         </div>
       </div>
 
-      {/* ===== TESTIMONIALS ===== */}
+     
       <div className="w-full px-4 md:px-10 py-12">
 
   {/* Heading */}
@@ -109,7 +109,7 @@ const About = () => {
     </h2>
   </div>
 
-  {/* ===== T-SHIRTS ===== */}
+  
   <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 py-10 border-t">
     {/* Image */}
     <div className="md:w-1/4 flex justify-center">
@@ -130,7 +130,7 @@ const About = () => {
     </div>
   </div>
 
-  {/* ===== BOXERS ===== */}
+ 
   <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 py-10 border-t">
     {/* Image */}
     <div className="md:w-1/4 flex justify-center">
@@ -151,7 +151,7 @@ const About = () => {
     </div>
   </div>
 
-  {/* ===== PHONE COVERS ===== */}
+  
   <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12 py-10 border-t">
     {/* Image */}
     <div className="md:w-1/4 flex justify-center">
