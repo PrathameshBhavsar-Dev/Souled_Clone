@@ -1,9 +1,8 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
 import { TiSocialYoutubeCircular } from "react-icons/ti";
 
-    const menuItems = [
+const menuItems = [
   "Gift Card FAQ",
   "Sale Terms & Conditions",
   "Miscellaneous",
@@ -14,133 +13,122 @@ import { TiSocialYoutubeCircular } from "react-icons/ti";
 ];
 
 const Contact = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
 
- const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <section className=" px-3">
+    <section className="w-full bg-white">
+
       {/* Top Section */}
-      <div className="bg-gray-100 text-center py-12  px-4 sm:px-6 lg:px-8 my-3">
-        <h2 className="text-2xl sm:text-3xl font-bold text-gray-900">
+      <div className="bg-gray-100 py-16 text-center">
+        <h2 className="text-4xl sm:text-5xl font-bold text-gray-900">
           Manage Your Orders Easily
         </h2>
-        <p className="mt-2 text-gray-700 text-base sm:text-lg">
-          Track, Return/ Exchange or Cancel your orders hassle-free.
+        <p className="mt-2 text-gray-700 text-lg sm:text-xl">
+          Track, Return / Exchange or Cancel your orders hassle-free.
         </p>
-        <button className="mt-6 bg-teal-700 text-white font-bold py-3 px-6 rounded-md hover:bg-teal-800 transition-transform duration-300 hover:-translate-y-1">
+        <button className="mt-6 bg-teal-700 text-white px-8 py-3 rounded-md font-semibold">
           MY ORDERS
         </button>
       </div>
 
-      {/* Bottom Section */}
-      <div className="bg-red-500 text-white text-center py-2 px-4 sm:px-6 lg:px-8">
-        <h3 className="text-xl sm:text-2xl font-bold">
+      {/* Red Help Bar */}
+      <div className="bg-red-600 py-10">
+        <h3 className="text-2xl sm:text-3xl text-white font-semibold text-center mb-4">
           What can we help you with today?
         </h3>
-        <div className="mt-6 max-w-sm mx-auto">
-          <select className="w-full p-3 rounded-md text-gray-700 bg-white">
+        <div className="max-w-md mx-auto bg-white p-3 rounded-md shadow">
+          <select className="w-full p-3 border border-gray-300 rounded-md text-gray-700">
             <option>Please select your query.</option>
             <option>Order Status</option>
-            <option>Return/Exchange</option>
+            <option>Return / Exchange</option>
             <option>Cancel Order</option>
             <option>Other Queries</option>
           </select>
         </div>
       </div>
 
-      <div className="flex max-w-6xl mx-auto mt-10 p-4 gap-6 justify-center">
-      {/* Left Menu */}
-      <div className="w-1/4 border-r border-gray-300">
-        {menuItems.map((item, index) => (
-          <div
-            key={index}
-            className={`p-3 cursor-pointer hover:text-blue-600 ${
-              activeIndex === index ? "text-blue-600 font-semibold" : "text-gray-700"
-            }`}
-            onClick={() => setActiveIndex(index)}
-          >
-            {item}
-          </div>
-        ))}
+      {/* FAQ Title */}
+      <div className="max-w-6xl mx-auto mt-16 text-center">
+        <h2 className="text-2xl font-semibold text-gray-700">FAQs</h2>
+        <div className="mt-3 border-b border-gray-300"></div>
       </div>
 
-      {/* Right Content */}
-      <div className="w-3/4 p-4 justify-center">
-        {/* This is where you can add your text for each menu */}
-        {activeIndex === 0 && (
-          <div>
-            {/* Add Gift Card FAQ content here */}
-            <h2 className="font-bold text-lg mb-2">Gift Card FAQ</h2>
-            <p>Space to add your content...</p>
-          </div>
-        )}
-        {activeIndex === 1 && (
-          <div>
-            {/* Add Sale Terms content here */}
-            <h2 className="font-bold text-lg mb-2">Sale Terms & Conditions</h2>
-            <p>Space to add your content...</p>
-          </div>
-        )}
-        {activeIndex === 2 && (
-          <div>
-            {/* Add Miscellaneous content here */}
-            <h2 className="font-bold text-lg mb-2">Miscellaneous</h2>
-            <p>Space to add your content...</p>
-          </div>
-        )}
-        {activeIndex === 3 && (
-          <div>
-            {/* Add Exclusive Membership content here */}
-            <h2 className="font-bold text-lg mb-2">Exclusive Membership</h2>
-            <p>Space to add your content...</p>
-          </div>
-        )}
-        {activeIndex === 4 && (
-          <div>
-            {/* Add Returns/Exchange/Refund content here */}
-            <h2 className="font-bold text-lg mb-2">Returns, Exchange & Refund</h2>
-            <p>Space to add your content...</p>
-          </div>
-        )}
-        {activeIndex === 5 && (
-          <div>
-            {/* Add Shipping & Tracking content here */}
-            <h2 className="font-bold text-lg mb-2">Shipping & Tracking</h2>
-            <p>Space to add your content...</p>
-          </div>
-        )}
-        {activeIndex === 6 && (
-          <div>
-            {/* Add Orders & Payment content here */}
-            <h2 className="font-bold text-lg mb-2">Orders & Payment</h2>
-            <p>Space to add your content...</p>
-          </div>
-        )}
-      </div>
-    </div>
+      {/* FAQ Section */}
+      <div className="max-w-6xl mx-auto mt-10 flex gap-10 px-4">
 
-      {/* Footer / Social */}
-      <div className="bg-white py-8 text-center">
-        <h4 className="font-semibold mb-4">Stay in touch</h4>
-        <div className="flex justify-center gap-6 text-2xl">
-          <span className="cursor-pointer text-blue-600 transform transition duration-300 hover:-translate-y-1">
-            <FaFacebook />
-          </span>
-          <span className="cursor-pointer text-pink-500 transform transition duration-300 hover:-translate-y-1">
-            <FaInstagram />
-          </span>
-          <span className="cursor-pointer text-red-600 transform transition duration-300 hover:-translate-y-1">
-            <TiSocialYoutubeCircular />
-          </span>
-          <span className="cursor-pointer text-black transform transition duration-300 hover:-translate-y-1">
-            <FaTwitter />
-          </span>
+        {/* Left Menu */}
+        <div className="w-[25%] border-r border-gray-300 pr-6 space-y-4 text-sm uppercase tracking-wide">
+          {menuItems.map((item, index) => (
+            <div
+              key={index}
+              className={`cursor-pointer ${
+                activeIndex === index
+                  ? "text-red-600 font-semibold"
+                  : "text-gray-700 hover:text-red-600"
+              }`}
+              onClick={() => setActiveIndex(index)}
+            >
+              {item}
+            </div>
+          ))}
+        </div>
+
+        {/* Right Content */}
+        <div className="w-[75%] text-sm text-gray-700 leading-relaxed">
+          <h3 className="font-semibold mb-3">{menuItems[activeIndex]}</h3>
+
+          <p className="mb-3">
+            TSS Points are given to The Souled Store users as part of promotional
+            activities and loyalty programs.
+          </p>
+
+          <ul className="list-disc pl-5 space-y-2 marker:text-red-600">
+            <li>Points are valid only till the mentioned expiry date.</li>
+            <li>Maximum 10% of the order value can be redeemed.</li>
+            <li>Points are non-transferable and cannot be encashed.</li>
+            <li>Points cannot be combined with certain offers.</li>
+            <li>Misuse of points may lead to account suspension.</li>
+          </ul>
         </div>
       </div>
+
+      {/* Stay in Touch */}
+      <div className="max-w-6xl mb-12 mx-auto mt-20 text-center">
+        <h3 className="text-2xl font-semibold text-gray-700 mb-6">Stay in touch</h3>
+
+        <div className="flex justify-center gap-10">
+          <div className="flex flex-col items-center">
+            <div className="bg-blue-600 text-white p-3 rounded-full">
+              <FaFacebook />
+            </div>
+            <span className="mt-2 text-sm">Facebook</span>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <div className="bg-pink-500 text-white p-3 rounded-full">
+              <FaInstagram />
+            </div>
+            <span className="mt-2 text-sm">Instagram</span>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <div className="bg-red-600 text-white p-3 rounded-full">
+              <TiSocialYoutubeCircular />
+            </div>
+            <span className="mt-2 text-sm">YouTube</span>
+          </div>
+
+          <div className="flex flex-col items-center">
+            <div className="bg-black text-white p-3 rounded-full">
+              <FaTwitter />
+            </div>
+            <span className="mt-2 text-sm">X</span>
+          </div>
+        </div>
+      </div>
+
     </section>
   );
 };
 
 export default Contact;
-
-
-
