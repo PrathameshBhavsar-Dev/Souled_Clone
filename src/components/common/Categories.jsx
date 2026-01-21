@@ -4,7 +4,7 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const Categories = ({ data, columns = 4 }) => {
+const Categories = ({ data = [], columns = 4 }) => {
   const chunkSize = 4; // mobile stays 2x2 per slide
   const slides = [];
 

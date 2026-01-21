@@ -28,9 +28,7 @@ const NewCollection = () => {
            text-white text-xl md:text-2xl 
            p-3 rounded-full 
            bg-transparent 
-           hover:bg-white hover:text-black 
-           transition-all duration-300 
-           shadow-[0_0_12px_rgba(0,0,0,0.9)] 
+          filter drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]         
            z-20"
 
           >
@@ -40,13 +38,11 @@ const NewCollection = () => {
           {/* Right Arrow */}
           <button
             onClick={() => swiperRef.current.slideNext()}
-className="absolute right-3 sm:right-5 md:right-10 top-1/2 -translate-y-1/2 
+            className="absolute right-3 sm:right-5 md:right-10 top-1/2 -translate-y-1/2 
            text-white text-xl md:text-2xl 
            p-3 rounded-full 
            bg-transparent 
-           hover:bg-white hover:text-black 
-           transition-all duration-300 
-           shadow-[0_0_12px_rgba(0,0,0,0.9)] 
+           filter drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]       
            z-20"
 
 
