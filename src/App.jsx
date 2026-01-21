@@ -16,9 +16,10 @@ const App = () => {
         onClose={() => setIsSidebarOpen(false)}
       />
       <AppRoutes />
+
       <Footer />
     </>
   );
-}
+};
 
 export default App;
