@@ -23,7 +23,7 @@ const Footer = () => {
       </div>
 
       <div className="bg-white h-26">
-      <div className=" text-black text-center py-4 text-4xl font-semibold pt-8">
+      <div className=" text-black text-center py-4 text-4xl font-semibold pt-8 h-full" >
         Over <span className="font-bold">6 Million</span> Happy Customers
       </div>
       </div>
