@@ -6,7 +6,6 @@ import { BrowserRouter as Router, Navigate } from "react-router-dom";
 import Men from "../pages/Men";
 import Women from "../pages/Women";
 import Sneakers from "../pages/Sneakers";
-// import Track from "../components/common/Track";
 import Contact from "../components/common/Contact";
 import ProductDetailsPage from "../pages/ProductDetailsPage";
 
@@ -21,7 +20,6 @@ const AppRoutes = () => {
       <Route path="/women" element={<Women />} />
       <Route path="/sneakers" element={<Sneakers />} />
       <Route path="/wishlist" element={<WishlistDefault />} />
-      {/* <Route path="track" element={<Track/>}/> */}
       <Route path="/contact" element={<Contact/>}/>
       <Route path="/product/:id" element={<ProductDetailsPage />} />
     </Routes>
