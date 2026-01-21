@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import mens1 from '../../assets/mens (1).jpg';
 import mens2 from '../../assets/mens (2).jpg';
 import mens3 from '../../assets/mens (3).jpg';
@@ -13,7 +13,7 @@ import sneakers1 from '../../assets/sneakers1 (1).jpg';
 import sneakers2 from '../../assets/sneakers1 (2).jpg';
 import sneakers3 from '../../assets/sneakers1 (3).jpg';
 import sneakers4 from '../../assets/sneakers1 (4).jpg';
-import sneakers5 from '../../assets/sneakers1 (5).jpg'; 
+import sneakers5 from '../../assets/sneakers1 (5).jpg';
 import mainlogo from '../../assets/mainlogo.gif';
 import shopbycat1 from '../../assets/shopbycategory (1).jpg';
 import shopbycat2 from '../../assets/shopbycategory (2).jpg';
@@ -27,8 +27,6 @@ import shopbystyle1 from '../../assets/shopbystyle (1).jpg';
 import shopbystyle2 from '../../assets/shopbystyle (2).jpg';
 import shopbystyle3 from '../../assets/shopbystyle (3).jpg';
 import shopbystyle4 from '../../assets/shopbystyle (4).jpg';
-
-
 
 const SideBar = ({ isOpen, onClose }) => {
   const [activeTab, setActiveTab] = useState('MEN');
@@ -50,7 +48,7 @@ const SideBar = ({ isOpen, onClose }) => {
       { name: 'Anime', img: mens3 },
       { name: 'Harry Potter', img: mens4 },
       { name: 'Marvel', img: mens5 },
-       { name: 'New Arrivals', img: mens1 },
+      { name: 'New Arrivals', img: mens1 },
       { name: 'Hot Mearch', img: mens2 },
       { name: 'Anime', img: mens3 },
       { name: 'Harry Potter', img: mens4 },
@@ -62,7 +60,7 @@ const SideBar = ({ isOpen, onClose }) => {
       { name: 'Oversized Tees', img: womens3 },
       { name: 'New Arrivals', img: womens4 },
       { name: 'Bestsellers', img: womens5 },
-       { name: 'Harry Potter', img: womens1 },
+      { name: 'Harry Potter', img: womens1 },
       { name: 'Kawaii', img: womens2 },
       { name: 'Oversized Tees', img: womens3 },
       { name: 'New Arrivals', img: womens4 },
@@ -112,7 +110,7 @@ const SideBar = ({ isOpen, onClose }) => {
     { name: 'Pants', img: mens4 },
     { name: 'Joggers', img: mens5 }
   ];
-   const shopByFitBottom = [
+  const shopByFitBottom = [
     { name: 'OverSized Fit', img: shopbyfit1 },
     { name: 'Winterwear', img: shopbyfit2 },
     { name: 'Polos', img: shopbyfit3 },
@@ -126,7 +124,7 @@ const SideBar = ({ isOpen, onClose }) => {
     { name: 'Casual Shirts', img: shopbyfit4 },
     { name: 'Cotton Linen Shirts', img: shopbyfit1 }
   ];
-   const shopByStyle = [
+  const shopByStyle = [
     { name: 'Textured', img: shopbystyle1 },
     { name: 'Winterwear', img: shopbystyle2 },
     { name: 'Polos', img: shopbystyle3 },
@@ -146,7 +144,7 @@ const SideBar = ({ isOpen, onClose }) => {
   const shopCategories = [
     { name: 'All Winterwear', img: '/winterwear.jpg' },
     { name: 'All Topwear', img: '/topwear.jpg' },
-    { name: 'All Bottomwear', img: '/bottomwear.jpg' }, 
+    { name: 'All Bottomwear', img: '/bottomwear.jpg' },
     { name: 'T-Shirts', img: '/tshirts.jpg' },
     { name: 'Shirts', img: '/shirts.jpg' },
     { name: 'Dresses & Jumpsuits', img: '/dresses.jpg' },
@@ -154,23 +152,38 @@ const SideBar = ({ isOpen, onClose }) => {
     { name: 'Sneakers', img: '/sneakers.jpg' },
     { name: 'All Accessories', img: '/accessories.jpg' }
   ];
-  
+
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "auto";
+  }, [isOpen]);
 
   return (
     <>
-      {isOpen && <div className="fixed inset-0 bg-black bg-opacity-50 z-40" onClick={onClose} />}
-      
-      <div className={`fixed top-0 left-0 h-full w-[40%] bg-white z-50 transform transition-transform duration-300 overflow-y-auto ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-        
+      {isOpen && (
+        <div
+          className="fixed inset-0 z-40"
+          onClick={onClose}
+        />
+      )}
+
+      <div
+        className={`fixed top-0 left-0 h-full
+  w-72 md:w-96 lg:w-[40%]
+  bg-white z-50
+  transform transition-transform duration-300
+  overflow-y-auto
+  ${isOpen ? "translate-x-0" : "-translate-x-full"}`}
+      >
+
         {/* Header */}
         <div className="p-4 border-b flex h-25">
-        <img src={mainlogo} alt="Main Logo"  />
+          <img src={mainlogo} alt="Main Logo" />
           <button className="self-center border border-b rounded py-2 text-center text-gray-800 h-10 px-4 ml-auto hover:border-teal-500 hover:text-teal-600 transition-all">
             Log In/Register
           </button>
         </div>
 
-       
+
 
         {/* Navigation Tabs */}
         <div className="flex border-b">
@@ -181,7 +194,7 @@ const SideBar = ({ isOpen, onClose }) => {
 
         {/* Categories Carousel */}
         <div className="p-7">
-          <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide" style={{scrollbarWidth: 'none', msOverflowStyle: 'none'}}>
+          <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {categories[activeTab].map((cat, idx) => (
               <div key={idx} className="flex-shrink-0 text-center">
                 <img src={cat.img} alt={cat.name} className="w-20 h-20 object-cover rounded-lg mb-2" />
@@ -195,9 +208,9 @@ const SideBar = ({ isOpen, onClose }) => {
           </div> */}
         </div>
 
- {/* Shop All Section */}
+        {/* Shop All Section */}
         <div className="border-t border-gray-300">
-          <button 
+          <button
             onClick={() => setShopAllOpen(!shopAllOpen)}
             className="w-full p-4 flex justify-between items-center font-medium"
           >
@@ -208,7 +221,7 @@ const SideBar = ({ isOpen, onClose }) => {
           </button>
           {shopAllOpen && (
             <div className="border-t border-gray-300">
-              <button 
+              <button
                 onClick={() => setCategoriesOpen(!categoriesOpen)}
                 className="w-full p-4 flex justify-between items-center font-medium pl-8"
               >
@@ -235,7 +248,7 @@ const SideBar = ({ isOpen, onClose }) => {
 
         {/* Topwear Section */}
         <div className="border-t border-gray-300">
-          <button 
+          <button
             onClick={() => setTopwearOpen(!topwearOpen)}
             className="w-full p-4 flex justify-between items-center font-medium"
           >
@@ -250,7 +263,7 @@ const SideBar = ({ isOpen, onClose }) => {
           <>
             {/* Shop By Category */}
             <div className="border-t border-gray-300">
-              <button 
+              <button
                 onClick={() => setShopByCategoryOpen(!shopByCategoryOpen)}
                 className="w-full p-4 flex justify-between items-center pl-8"
               >
@@ -275,7 +288,7 @@ const SideBar = ({ isOpen, onClose }) => {
 
             {/* Shop By Fit */}
             <div className="border-t border-gray-300">
-              <button 
+              <button
                 onClick={() => setShopByFitOpen(!shopByFitOpen)}
                 className="w-full p-4 flex justify-between items-center pl-8"
               >
@@ -284,7 +297,7 @@ const SideBar = ({ isOpen, onClose }) => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-               {shopByFitOpen && (
+              {shopByFitOpen && (
                 <div className="px-4 pb-4">
                   <div className="flex gap-3 overflow-x-auto">
                     {shopByFit.map((item, idx) => (
@@ -300,7 +313,7 @@ const SideBar = ({ isOpen, onClose }) => {
 
             {/* Shop By Style */}
             <div className="border-t border-gray-300">
-              <button 
+              <button
                 onClick={() => setShopByStyleOpen(!shopByStyleOpen)}
                 className="w-full p-4 flex justify-between items-center pl-8"
               >
@@ -309,7 +322,7 @@ const SideBar = ({ isOpen, onClose }) => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-                 {shopByStyleOpen && (
+              {shopByStyleOpen && (
                 <div className="px-4 pb-4">
                   <div className="flex gap-3 overflow-x-auto">
                     {shopByStyle.map((item, idx) => (
@@ -327,7 +340,7 @@ const SideBar = ({ isOpen, onClose }) => {
 
         {/* Bottomwear Section */}
         <div className="border-t border-gray-300">
-          <button 
+          <button
             onClick={() => setBottomwearOpen(!bottomwearOpen)}
             className="w-full p-4 flex justify-between items-center font-medium"
           >
@@ -341,7 +354,7 @@ const SideBar = ({ isOpen, onClose }) => {
         {bottomwearOpen && (
           <>
             <div className="border-t border-gray-300">
-              <button 
+              <button
                 onClick={() => setShopByCategoryBottomOpen(!shopByCategoryBottomOpen)}
                 className="w-full p-4 flex justify-between items-center pl-8"
               >
@@ -364,7 +377,7 @@ const SideBar = ({ isOpen, onClose }) => {
               )}
             </div>
             <div className="border-t border-gray-300">
-              <button 
+              <button
                 onClick={() => setShopByFitBottomOpen(!shopByFitBottomOpen)}
                 className="w-full p-4 flex justify-between items-center pl-8"
               >
@@ -373,7 +386,7 @@ const SideBar = ({ isOpen, onClose }) => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-               {shopByFitBottomOpen && (
+              {shopByFitBottomOpen && (
                 <div className="px-4 pb-4">
                   <div className="flex gap-3 overflow-x-auto">
                     {shopByFitBottom.map((item, idx) => (
@@ -391,7 +404,7 @@ const SideBar = ({ isOpen, onClose }) => {
 
         {/* All Accessories Section */}
         <div className="border-t border-gray-300">
-          <button 
+          <button
             onClick={() => setAccessoriesOpen(!accessoriesOpen)}
             className="w-full p-4 flex justify-between items-center font-medium"
           >
