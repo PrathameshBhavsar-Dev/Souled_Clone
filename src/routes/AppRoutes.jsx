@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
-import LoginSection from "../pages/Login";
-import RegisterSection from "../pages/Register";
-import WishlistDefault from "../components/public/WishlistDefault";
+// import LoginSection from "../pages/Login";
+// import RegisterSection from "../pages/Register";
+// import WishlistDefault from "../components/public/WishlistDefault";
 import { BrowserRouter as Router, Navigate } from "react-router-dom";
 import Men from "../pages/Men";
 import Women from "../pages/Women";

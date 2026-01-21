@@ -31,7 +31,7 @@ const Men = () => {
     </div>
   );
 };
-
+  
 export default Men;
 
 
