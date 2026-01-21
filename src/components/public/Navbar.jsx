@@ -8,7 +8,7 @@ import {
   FaMicrophone,
 } from "react-icons/fa";
 
-function Navbar() {
+function Navbar({ onMenuClick }) {
   const location = useLocation();
 
   const menuItems = ["MEN", "WOMEN", "SNEAKERS"];
@@ -22,10 +22,13 @@ function Navbar() {
       {/* ================= MAIN NAVBAR ================= */}
       <nav className="sticky top-0 z-50 w-full bg-white border-b shadow-sm">
         <div className="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
-          
+
           {/* LEFT SECTION */}
           <div className="flex items-center gap-7 pl-3">
-            <FaBars className="text-xl cursor-pointer text-gray-600 opacity-70" />
+            <FaBars
+              className="text-xl cursor-pointer text-gray-600 opacity-70"
+              onClick={onMenuClick}
+            />
 
             {/* Desktop Menu */}
             <ul className="hidden md:flex gap-6 font-semibold text-gray-800">
@@ -37,10 +40,9 @@ function Navbar() {
                     after:h-0.5 after:bg-red-500 after:w-full
                     after:scale-x-0 after:origin-left after:transition-transform
                     hover:after:scale-x-100
-                    ${
-                      activeCategory === item
-                        ? "after:scale-x-100 "
-                        : ""
+                    ${activeCategory === item
+                      ? "after:scale-x-100 "
+                      : ""
                     }`}
                 >
                   <Link to={`/${item.toLowerCase()}`}>{item}</Link>
@@ -56,7 +58,7 @@ function Navbar() {
 
           {/* RIGHT SECTION */}
           <div className="flex items-center gap-3 md:gap-7 pr-3">
-            
+
             {/* Search Bar */}
             <div className="hidden md:flex items-center border border-black rounded-full px-4 py-2 gap-3">
               <input
@@ -70,7 +72,7 @@ function Navbar() {
 
             {/* Icons */}
             <div className="flex items-center gap-5">
-              
+
               {/* USER ICON */}
               <div className="relative group hidden md:block">
                 <div className="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-full cursor-pointer hover:bg-gray-100 hover:border-red-500 transition-all">
@@ -121,11 +123,10 @@ function Navbar() {
           {menuItems.map((item) => (
             <li
               key={item}
-              className={`py-3 ${
-                activeCategory === item
+              className={`py-3 ${activeCategory === item
                   ? "underline decoration-4 decoration-blue-400"
                   : ""
-              }`}
+                }`}
             >
               <Link to={`/${item.toLowerCase()}`}>{item}</Link>
             </li>
