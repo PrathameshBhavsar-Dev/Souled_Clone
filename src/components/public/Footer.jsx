@@ -16,12 +16,16 @@ const Footer = () => {
   return (
     <footer className="bg-[#e6e7e8] text-gray-700 text-sm">
       {/* Top Red Banner */}
-      <div className=" bg-red-600 text-white text-center py-2 font-semibold text-2xl">
+     <div className=" bg-red-600 h-20 text-center text-38 font-sans">
+      <div className="  text-white text-center py-2 pt-5 font-semibold text-2xl">
         HOMEGROWN INDIAN BRAND
       </div>
+      </div>
 
-      <div className="bg-white text-black text-center py-4 text-xl">
+      <div className="bg-white h-26">
+      <div className=" text-black text-center py-4 text-4xl font-semibold pt-8">
         Over <span className="font-bold">6 Million</span> Happy Customers
+      </div>
       </div>
 
       {/* Main Section */}
