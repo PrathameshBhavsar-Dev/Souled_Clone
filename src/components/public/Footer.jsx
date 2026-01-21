@@ -16,12 +16,16 @@ const Footer = () => {
   return (
     <footer className="bg-[#e6e7e8] text-gray-700 text-sm">
       {/* Top Red Banner */}
-      <div className=" bg-red-600 text-white text-center py-2 font-semibold text-2xl">
+     <div className=" bg-red-600 h-20 text-center text-38 font-sans">
+      <div className="  text-white text-center py-2 pt-5 font-semibold text-2xl">
         HOMEGROWN INDIAN BRAND
       </div>
+      </div>
 
-      <div className="bg-white text-black text-center py-4 text-xl">
+      <div className="bg-white h-26">
+      <div className=" text-black text-center py-4 text-4xl font-semibold pt-8 h-full" >
         Over <span className="font-bold">6 Million</span> Happy Customers
+      </div>
       </div>
 
       {/* Main Section */}
@@ -33,7 +37,7 @@ const Footer = () => {
             {[
               <Link to="/contact">Contact</Link>,
               <Link to="/track">Track</Link>,
-              "Returns & Refunds",
+             <Link to="/refund">Refund</Link>, 
               "FAQs",
               "My Account",
             ].map((item) => (
@@ -76,7 +80,7 @@ const Footer = () => {
           <h3 className="text-red-600 font-bold mb-4">COMPANY</h3>
           <ul className="space-y-2">
             {[
-              "About Us",
+            <Link to="/about">About</Link>, 
               "Investor Relation",
               "Careers",
               "Gift Vouchers",
@@ -135,9 +139,9 @@ const Footer = () => {
           EXPERIENCE THE SOULED STORE APP
         </p>
 
-        <div className="flex justify-center gap-3">
-          <img src="/footer_img/googleplay.png" className="h-9" />
-          <img src="/footer_img/app.png" className="h-5 mt-2" />
+        <div className="flex justify-center gap-3 mt-1">
+          <img src="/footer_img/googleplay.png" className="h-18 " />
+          <img src="/footer_img/app.png" className="h-9 mt-4" />
         </div>
       </div>
 
