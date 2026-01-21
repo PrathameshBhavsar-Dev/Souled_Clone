@@ -8,7 +8,12 @@ import { menCategories } from "../data/menCategories";
 import HomegrownBand from "../components/sections/men/HomegrownBand";
 import CuratedGrid from "../components/common/CuratedGrid";
 import { menCurated } from "../data/menCurated";
+import Card from "../components/common/Card";
+import { products } from "../data/products";
 
+const menProducts = products.filter(
+  (p) => p.category === "men"
+);
 const Men = () => {
   return (
     <div>
@@ -18,8 +23,17 @@ const Men = () => {
        <HomegrownBand/>
        <CuratedGrid data={menCurated} />
       <Filters filters={menFilters} />
+      <div className="flex flex-wrap gap-4 p-5">
+        {menProducts.map((item) => (
+          <Card key={item.id} product={item} />
+        ))}
+      </div>
     </div>
   );
 };
 
 export default Men;
+
+
+
+
