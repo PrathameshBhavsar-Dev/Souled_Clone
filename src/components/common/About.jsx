@@ -11,7 +11,7 @@ const About = () => {
       </div>
 
       <div className="ml-10">
-  <div className="flex  gap-8 h-50 w-30">
+  <div className="flex  gap-8 h-50 ">
     
  
     <img 
