@@ -8,6 +8,7 @@ import Women from "../pages/Women";
 import Sneakers from "../pages/Sneakers";
 // import Track from "../components/common/Track";
 import Contact from "../components/common/Contact";
+import ProductDetailsPage from "../pages/ProductDetailsPage";
 
 
 const AppRoutes = () => {
@@ -22,6 +23,7 @@ const AppRoutes = () => {
       <Route path="/wishlist" element={<WishlistDefault />} />
       {/* <Route path="track" element={<Track/>}/> */}
       <Route path="/contact" element={<Contact/>}/>
+      <Route path="/product/:id" element={<ProductDetailsPage />} />
     </Routes>
   );
 };
