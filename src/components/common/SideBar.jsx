@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import mens1 from '../../assets/mens (1).jpg';
 import mens2 from '../../assets/mens (2).jpg';
 import mens3 from '../../assets/mens (3).jpg';
@@ -29,7 +30,21 @@ import shopbystyle3 from '../../assets/shopbystyle (3).jpg';
 import shopbystyle4 from '../../assets/shopbystyle (4).jpg';
 
 const SideBar = ({ isOpen, onClose }) => {
-  const [activeTab, setActiveTab] = useState('MEN');
+  const location = useLocation();
+
+  // Route detection function to map pathname to tab
+  const detectTabFromRoute = () => {
+    const pathname = location.pathname;
+    if (pathname.includes('/women')) {
+      return 'WOMEN';
+    } else if (pathname.includes('/sneakers')) {
+      return 'SNEAKERS';
+    } else {
+      return 'MEN';
+    }
+  };
+
+  const [activeTab, setActiveTab] = useState(detectTabFromRoute());
   const [shopAllOpen, setShopAllOpen] = useState(false);
   const [categoriesOpen, setCategoriesOpen] = useState(false);
   const [shopByCategoryOpen, setShopByCategoryOpen] = useState(false);
@@ -156,6 +171,13 @@ const SideBar = ({ isOpen, onClose }) => {
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
+
+  // Update activeTab when sidebar opens or route changes
+  useEffect(() => {
+    if (isOpen) {
+      setActiveTab(detectTabFromRoute());
+    }
+  }, [isOpen, location.pathname]);
 
   return (
     <>
