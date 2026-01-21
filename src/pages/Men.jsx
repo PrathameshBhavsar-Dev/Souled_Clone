@@ -12,9 +12,9 @@ const Men = () => {
       <MainSlider activeCategory="MEN" />
       <NewCollection />
        <Categories data={menCategories} />
-      <Filters filters={menFilters} />
+      <Filters filters={menFilters} /> 
     </div>
   );
 };
-
+  
 export default Men;
