@@ -135,9 +135,9 @@ const Footer = () => {
           EXPERIENCE THE SOULED STORE APP
         </p>
 
-        <div className="flex justify-center gap-3">
-          <img src="/footer_img/googleplay.png" className="h-9" />
-          <img src="/footer_img/app.png" className="h-5 mt-2" />
+        <div className="flex justify-center gap-3 mt-1">
+          <img src="/footer_img/googleplay.png" className="h-18 " />
+          <img src="/footer_img/app.png" className="h-9 mt-4" />
         </div>
       </div>
 

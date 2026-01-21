@@ -5,7 +5,6 @@ import Footer from "./components/public/Footer"
 import AppRoutes from "./routes/AppRoutes"
 import SideBar from "./components/common/SideBar";
 
-
 const App = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -19,7 +18,6 @@ const App = () => {
       <AppRoutes />
 
       <Footer />
-      
     </>
   );
 };
