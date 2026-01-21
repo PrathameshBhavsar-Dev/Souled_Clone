@@ -6,6 +6,10 @@ import CuratedGrid from "../components/common/CuratedGrid";
 import { womenFilters } from "../data/womenFilters";
 import {womenCategories} from "../data/womenCategories";
 import { womenCurated } from "../data/womenCurated";
+<<<<<<< HEAD
+
+=======
+>>>>>>> ae53df73db18dabdfb8d23035d72abc18d71faeb
 import Card from "../components/common/Card";
 import { products } from "../data/products";
 
