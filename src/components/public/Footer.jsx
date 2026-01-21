@@ -33,7 +33,7 @@ const Footer = () => {
             {[
               <Link to="/contact">Contact</Link>,
               <Link to="/track">Track</Link>,
-              "Returns & Refunds",
+             <Link to="/refund">Refund</Link>, 
               "FAQs",
               "My Account",
             ].map((item) => (
@@ -76,7 +76,7 @@ const Footer = () => {
           <h3 className="text-red-600 font-bold mb-4">COMPANY</h3>
           <ul className="space-y-2">
             {[
-              "About Us",
+            <Link to="/about">About</Link>, 
               "Investor Relation",
               "Careers",
               "Gift Vouchers",

@@ -4,12 +4,14 @@ import Footer from "./components/public/Footer"
 import AppRoutes from "./routes/AppRoutes"
 
 
+
 const App = () => {
   return (
     <>
       <Navbar />
       <AppRoutes />
       <Footer />
+      
     </>
   );
 }
