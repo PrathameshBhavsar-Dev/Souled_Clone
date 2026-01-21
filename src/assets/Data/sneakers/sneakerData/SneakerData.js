@@ -42,28 +42,30 @@ const WomenData = [
 
   {
     id: 4,
-    title: "Hello Kitty: Pink Bow",
-    type: "Women Oversized T-Shirts",
-    price: 599,
-    img1: "../photos/kitty1.png",
-    img2: "../photos/kitty2.png",
-    img3: "../photos/kitty3.png",
-    img4: "../photos/kitty4.png",
-    img5: "../photos/kitty5.png",
-    display: "../photos/kitty-display.png"
+    title: "Velocity: Apex",
+    type: "Men Low Top Sneakers",
+    price: 2599,
+    img1: "../photos/apex1.png",
+    img2: "../photos/apex2.png",
+    img3: "../photos/apex3.png",
+    img4: "../photos/apex4.png",
+    img5: "../photos/apex5.png",
+    img6: "../photos/apex6.png",
+    img7: "../photos/apex7.png",
+    img8: "../photos/apex8.png"
   },
 
   {
     id: 5,
-    title: "Catwoman: Meaow",
-    type: "Women Oversized T-Shirts",
-    price: 1049,
-    img1: "../photos/catwoman1.png",
-    img2: "../photos/catwoman2.png",
-    img3: "../photos/catwoman3.png",
-    img4: "../photos/catwoman4.png",
-    img5: "../photos/catwoman5.png",
-    display: "../photos/catwoman-display.png"
+    title: "Urban Blaze: Fury",
+    type: "Men Low Top Sneakers",
+    price: 2599,
+    img1: "../photos/fury1.png",
+    img2: "../photos/fury2.png",
+    img3: "../photos/fury3.png",
+    img4: "../photos/fury4.png",
+    img5: "../photos/fury5.png",
+    img6: "../photos/fury6.png",
   }
 ];
 
