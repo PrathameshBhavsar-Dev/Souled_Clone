@@ -19,8 +19,8 @@ const Men = () => {
     <div>
       <MainSlider activeCategory="MEN" />
       <NewCollection />
-      <Categories data={menCategories} />
-      <HomegrownBand />
+       <Categories data={menCategories} />
+       <HomegrownBand/>
        <CuratedGrid data={menCurated} />
       <Filters filters={menFilters} />
       <div className="flex flex-wrap gap-4 p-5">
@@ -31,7 +31,7 @@ const Men = () => {
     </div>
   );
 };
-
+  
 export default Men;
 
 

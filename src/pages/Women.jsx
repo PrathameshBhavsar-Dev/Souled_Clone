@@ -6,7 +6,10 @@ import CuratedGrid from "../components/common/CuratedGrid";
 import { womenFilters } from "../data/womenFilters";
 import {womenCategories} from "../data/womenCategories";
 import { womenCurated } from "../data/womenCurated";
+<<<<<<< HEAD
 
+=======
+>>>>>>> ae53df73db18dabdfb8d23035d72abc18d71faeb
 import Card from "../components/common/Card";
 import { products } from "../data/products";
 
@@ -22,9 +25,9 @@ const Women = () => {
   return (
     <div>
       <MainSlider activeCategory="WOMEN" />
-      <Categories data={womenCategories} columns={3} />
-      <CuratedGrid data={womenCurated} />
-      <Filters filters={womenFilters} />
+          <Categories data={womenCategories} columns={3} />
+          <CuratedGrid data={womenCurated} />
+      <Filters filters={womenFilters}  />
     
       <h1 className="text-xl p-5">
         Total Products: {womenProducts.length}
