@@ -16,9 +16,9 @@ const Men = () => {
     <div>
       <MainSlider activeCategory="MEN" />
       <NewCollection />
-      <Categories data={menCategories} />
-      <HomegrownBand />
-      <CuratedGrid data={menCurated} />
+       <Categories data={menCategories} categoryType="men" />
+       <HomegrownBand/>
+       <CuratedGrid data={menCurated} />
       <Filters filters={menFilters} />
 
 
