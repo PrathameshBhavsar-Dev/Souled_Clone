@@ -1,24 +1,31 @@
-import React from "react";
 import { useParams } from "react-router-dom";
+import MenData from "../assets/Data/men/menData/MenData";
+import WomenData from "../assets/Data/women/womenData/WomenData";
+import SneakerData from "../assets/Data/sneakers/sneakerData/SneakerData";
 import ProductInfo from "../components/sections/productDetails/ProductInfo";
 import OthersBought from "../components/sections/productDetails/OthersBought";
-import { products } from "../data/products";
 
 export default function ProductDetailsPage() {
-  const { id } = useParams();
+  const { category, id } = useParams();
 
-  const product = products.find(
-    (item) => item.id.toString() === id
-  );
+  let product = null;
+
+  if (category === "men") {
+    product = MenData.find(item => item.id === id);
+  } else if (category === "women") {
+    product = WomenData.find(item => item.id === id);
+  } else if (category === "sneakers") {
+    product = SneakerData.find(item => item.id === id);
+  }
 
   if (!product) {
-    return <h2 className="p-10 text-center">Product Not Found</h2>;
+    return <p className="p-10 text-center">Product not found</p>;
   }
 
   return (
     <div className="p-5">
-      <ProductInfo product={product} />
-      <OthersBought />
+      <ProductInfo data={product} />
+     <OthersBought category={category} />
     </div>
   );
 }

@@ -3,24 +3,25 @@ import MainSlider from "../components/public/MainSlider";
 import Filters from "../components/common/Filters";
 import Categories from "../components/common/Categories";
 import Card from "../components/common/Card";
-import { products } from "../data/products";
 import { sneakerCategories } from "../data/sneakerCategories";
-
-const Women = () => {
-  const sneakerProducts = products.filter(
-    (p) => p.category === "sneakers"
-  );
+import SneakerData from "../assets/Data/sneakers/sneakerData/SneakerData"
+const Sneakers = () => {
+ 
   return (
     <div>
       <MainSlider activeCategory="SNEAKERS" />
       <Categories data={sneakerCategories} />
-      <div className="flex flex-wrap gap-4 p-5">
-        {sneakerProducts.map((item) => (
-          <Card key={item.id} product={item} />
-        ))}
+      
+
+       <div className="w-full">
+        <div className="grid grid-cols-4 gap-5 p-5">
+          {SneakerData.map(product => (
+            <Card key={product.id} product={product} />
+          ))}
+        </div>
       </div>
     </div>
   );
 };
 
-export default Women;
+export default Sneakers;
