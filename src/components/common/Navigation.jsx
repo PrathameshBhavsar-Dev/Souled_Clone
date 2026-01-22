@@ -6,43 +6,113 @@ const products = [
   {
     id: 1,
     title: "Black Clover: Black Bulls",
-    category: "Hoodies",
+    category: "Biker Jackets",
     price: 2599,
     size: ["M", "L", "XL"],
-    img: "../photos/display1.png",
+    img: "/Navigation_img/img1.avif",
   },
   {
     id: 2,
     title: "Polar Fleece Jacket: Peanuts",
-    category: "Biker Jackets",
+    category: "Tshirt",
     price: 2199,
     oldPrice: 2399,
-    size: ["S", "M", "L"],
-    img: "../photos/isro2.png",
+    size: ["S", "XXL", "L"],
+    img: "/Navigation_img/img2.avif",
   },
   {
     id: 3,
     title: "Bomber Jacket: Happy Days",
-    category: "Biker Jackets",
+    category: "Hoodies",
     price: 3499,
     oldPrice: 3999,
     size: ["L", "XL"],
-    img: "/products/3.jpg",
+    img: "/Navigation_img/img3.avif",
   },
   {
     id: 4,
     title: "Popeye: Iron Power",
-    category: "Hoodies",
+    category: "Tshirt",
     price: 2099,
     oldPrice: 2299,
     size: ["XS", "S", "M"],
-    img: "/Navigation_img/img1.avif",
+    img: "/Navigation_img/img4.avif",
+  },
+
+  {
+    id: 5,
+    title: "Popeye: Iron Power",
+    category: "Shirt",
+    price: 3099,
+    oldPrice: 4099,
+    size: ["XS", "S", "M"],
+    img: "/Navigation_img/img5.avif",
+  },
+
+  {
+    id: 6,
+    title: "Popeye: Iron Power",
+    category: "Tshirt",
+    price: 2999,
+    oldPrice: 2378,
+    size: ["XS", "S", "M"],
+    img: "/Navigation_img/img11.avif",
+  },
+
+  {
+    id: 7,
+    title: "Popeye: Iron Power",
+    category: "Shirt",
+    price: 4984,
+    oldPrice: 4999,
+    size: ["XS", "S", "XXL"],
+    img: "/Navigation_img/img7.avif",
+  },
+
+  {
+    id: 8,
+    title: "Popeye: Iron Power",
+    category: "Hoodies",
+    price: 3986,
+    oldPrice: 3999,
+    size: ["XS", "S", "M","XXL"],
+    img: "/Navigation_img/img8.avif",
+  },
+
+  {
+    id: 9,
+    title: "Popeye: Iron Power",
+    category: "Biker Jackets",
+    price: 7999,
+    oldPrice: 9999,
+    size: ["XS", "M"],
+    img: "/Navigation_img/img9.avif",
+  },
+
+  {
+    id: 10,
+    title: "Popeye: Iron Power",
+    category: "Biker Jackets",
+    price: 2467,
+    oldPrice: 2999,
+    size: ["XS", "S", "M","XXL" ,"L"],
+    img: "/Navigation_img/img10.avif",
+  },
+
+  {
+    id: 11,
+    title: "Popeye: Iron Power",
+    category: "Hoodies",
+    price: 4599,
+    oldPrice: 5000,
+    size: ["XS", "S", "M"],
+    img: "/Navigation_img/img11.avif",
   },
 ];
 
 /* ---------------- CONSTANTS ---------------- */
 const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
-const categories = ["Hoodies", "Biker Jackets"];
+const categories = ["Hoodies", "Biker Jackets" ,"Shirt", "Tshirt"];
 
 const Navigation = () => {
   const { slug } = useParams();
