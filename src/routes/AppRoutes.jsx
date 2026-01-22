@@ -21,7 +21,7 @@ const AppRoutes = () => {
       <Route path="/sneakers" element={<Sneakers />} />
       <Route path="/wishlist" element={<WishlistDefault />} />
       <Route path="/contact" element={<Contact/>}/>
-      <Route path="/product/:id" element={<ProductDetailsPage />} />
+<Route path="/product/:category/:id" element={<ProductDetailsPage />} />
     </Routes>
   );
 };
