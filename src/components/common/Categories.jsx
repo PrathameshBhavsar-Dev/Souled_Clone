@@ -5,8 +5,12 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const Categories = ({ data = [], columns = 4, categoryType = "men" }) => {
+const Categories = ({ data = [], columns = 4 }) => {
   const navigate = useNavigate();
+
+  const goToPage = (slug) => {
+    navigate(`/category/${slug}`);
+  };
 
   const chunkSize = 4; // mobile stays 2x2 per slide
   const slides = [];
@@ -16,32 +20,6 @@ const Categories = ({ data = [], columns = 4, categoryType = "men" }) => {
   }
 
   const colClass = columns === 3 ? "w-1/3" : "w-1/4";
-
-  // Convert category name to URL slug
-  const getCategorySlug = (name) => {
-    const slugMap = {
-      "T-shirt": "t-shirt",
-      "Shirts": "shirts",
-      "Winter Wear": "winter-wear",
-      "Joggers": "joggers",
-      "Jeans": "jeans",
-      "Polos": "polos",
-      "Pants": "pants",
-      "Sneakers": "sneakers",
-      "Backpacks": "backpacks",
-      "Accessories": "accessories",
-      "Socks": "socks",
-      "Shorts & Boxers": "shorts-boxers",
-    };
-    return slugMap[name] || name.toLowerCase().replace(/\s+/g, "-");
-  };
-
-  const handleCategoryClick = (categoryName) => {
-    const slug = getCategorySlug(categoryName);
-    if (categoryType === "men") {
-      navigate(`/men/${slug}`);
-    }
-  };
 
   return (
     <div className="w-full pt-5 pb-10">
@@ -53,16 +31,13 @@ const Categories = ({ data = [], columns = 4, categoryType = "men" }) => {
         {/* Desktop Grid */}
         <div className="hidden md:flex flex-wrap -mx-2 -mt-2">
           {data.map((item, index) => (
-            <div
-              key={index}
-              className={`${colClass} px-2 mb-6 cursor-pointer`}
-              onClick={() => handleCategoryClick(item.name)}
-            >
+            <div key={index} className={`${colClass} px-2 mb-6`}>
               <div className="overflow-hidden">
                 <img
                   src={item.img}
                   alt={item.name}
-                  className="w-full object-contain transition-transform duration-300 ease-out hover:scale-110"
+                  onClick={() => goToPage(item.slug)}
+                  className="w-full object-contain transition-transform duration-300 ease-out hover:scale-110 cursor-pointer"
                 />
               </div>
             </div>
@@ -82,15 +57,12 @@ const Categories = ({ data = [], columns = 4, categoryType = "men" }) => {
               <SwiperSlide key={i}>
                 <div className="grid grid-cols-2 gap-3">
                   {group.map((item, index) => (
-                    <div
-                      key={index}
-                      className="overflow-hidden cursor-pointer"
-                      onClick={() => handleCategoryClick(item.name)}
-                    >
+                    <div key={index} className="overflow-hidden">
                       <img
                         src={item.img}
                         alt={item.name}
-                        className="w-full object-contain transition-transform duration-300 ease-out hover:scale-110"
+                        onClick={() => goToPage(item.slug)}
+                        className="w-full object-contain transition-transform duration-300 ease-out hover:scale-110 cursor-pointer"
                       />
                     </div>
                   ))}

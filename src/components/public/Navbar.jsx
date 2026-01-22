@@ -13,7 +13,7 @@ function Navbar({ onMenuClick }) {
 
   const menuItems = ["MEN", "WOMEN", "SNEAKERS"];
 
-  // FIXED: Proper active category detection
+  
   const activeCategory =
     location.pathname.split("/")[1]?.toUpperCase() || "MEN";
 
@@ -104,8 +104,12 @@ function Navbar({ onMenuClick }) {
               </div>
 
               {/* Heart */}
+              
               <div className="w-10 h-10 flex items-center justify-center border border-gray-300 rounded-full cursor-pointer hover:bg-gray-100 hover:border-red-500 transition-all">
-                <FaHeart className="text-gray-700 text-lg hover:text-red-500" />
+                <Link to="wishlistdefault">
+              <FaHeart className="text-gray-700 text-lg hover:text-red-500" />
+            </Link>
+               
               </div>
 
               {/* Cart */}

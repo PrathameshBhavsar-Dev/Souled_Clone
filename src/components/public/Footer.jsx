@@ -38,8 +38,9 @@ const Footer = () => {
               <Link to="/contact">Contact</Link>,
               <Link to="/track">Track</Link>,
              <Link to="/refund">Refund</Link>, 
-              "FAQs",
-              "My Account",
+            
+              <Link to="/faq">FAQs</Link>,
+              <Link to="/account">My Account</Link>,
             ].map((item) => (
               <li
                 key={item}
@@ -81,9 +82,12 @@ const Footer = () => {
           <ul className="space-y-2">
             {[
             <Link to="/about">About</Link>, 
-              "Investor Relation",
-              "Careers",
-              "Gift Vouchers",
+            <Link to="/investor">Investor Relation</Link>,
+             <Link to="/careers">Careers</Link>,
+             <Link to="/gift">Gift Vouchers</Link>,
+              
+              
+             
               "Community Initiatives",
             ].map((item) => (
               <li
@@ -150,28 +154,28 @@ const Footer = () => {
         <span className="text-sm">Follow Us:</span>
 
         {/* Facebook */}
-        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-blue-500 cursor-pointer  ">
+        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-blue-500 cursor-pointer hover:translate-1">
           <a href="https://www.facebook.com/souledstore/">
             <FaFacebookF className="text-white text-lg" />
           </a>
         </div>
 
         {/* Instagram */}
-        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-pink-400 cursor-pointer">
+        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-pink-400 cursor-pointer hover:translate-1">
           <a href="https://www.instagram.com/TheSouledStore/">
             <FaInstagram className="text-white text-lg" />
           </a>
         </div>
 
         {/* Snapchat */}
-        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-400 cursor-pointer">
+        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-400 cursor-pointer hover:translate-1">
           <a href="https://www.snapchat.com/@thesouledstore">
             <FaSnapchatGhost className="text-white text-lg" />
           </a>
         </div>
 
         {/* Twitter */}
-        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-black cursor-pointer">
+        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-black cursor-pointer hover:translate-1">
           <a href="https://x.com/TheSouledStore">
             <FaTwitter className="text-white text-lg" />
           </a>
