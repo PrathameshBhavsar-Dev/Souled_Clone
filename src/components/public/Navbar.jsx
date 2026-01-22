@@ -13,7 +13,7 @@ function Navbar({ onMenuClick }) {
 
   const menuItems = ["MEN", "WOMEN", "SNEAKERS"];
 
-  // FIXED: Proper active category detection
+  
   const activeCategory =
     location.pathname.split("/")[1]?.toUpperCase() || "MEN";
 

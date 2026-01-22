@@ -38,8 +38,9 @@ const Footer = () => {
               <Link to="/contact">Contact</Link>,
               <Link to="/track">Track</Link>,
              <Link to="/refund">Refund</Link>, 
-              "FAQs",
-              "My Account",
+            
+              <Link to="/faq">FAQs</Link>,
+              <Link to="/account">My Account</Link>,
             ].map((item) => (
               <li
                 key={item}
@@ -81,9 +82,12 @@ const Footer = () => {
           <ul className="space-y-2">
             {[
             <Link to="/about">About</Link>, 
-              "Investor Relation",
-              "Careers",
-              "Gift Vouchers",
+            <Link to="/investor">Investor Relation</Link>,
+             <Link to="/careers">Careers</Link>,
+             <Link to="/gift">Gift Vouchers</Link>,
+              
+              
+             
               "Community Initiatives",
             ].map((item) => (
               <li

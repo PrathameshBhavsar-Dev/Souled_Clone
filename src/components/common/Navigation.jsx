@@ -163,12 +163,12 @@ const Navigation = () => {
 
   return (
     <div className="max-w-[1700px] mx-auto px-6 py-6">
-      {/* Breadcrumb */}
+     
       <p className="text-sm text-gray-500 mb-3">
         Home / Men / <span className="capitalize">{title}</span>
       </p>
 
-      {/* Header */}
+     
       <div className="flex justify-between items-center mb-6">
         <h1 className="text-lg font-semibold capitalize">
           Mens {title} – {filteredProducts.length} items
@@ -187,7 +187,7 @@ const Navigation = () => {
       <div className="flex gap-8">
         {/* ---------------- SIDEBAR ---------------- */}
         <aside className="w-[260px] hidden md:block">
-          {/* Categories */}
+       
           <h3 className="font-bold mb-3">CATEGORIES</h3>
 
           <div className="space-y-2 text-sm mb-6">
@@ -205,7 +205,7 @@ const Navigation = () => {
 
           <hr className="my-4" />
 
-          {/* Size */}
+         
           <h3 className="font-bold mb-3">SIZE</h3>
           <div className="flex flex-wrap gap-2">
             {sizes.map((size) => (
