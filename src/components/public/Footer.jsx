@@ -150,28 +150,28 @@ const Footer = () => {
         <span className="text-sm">Follow Us:</span>
 
         {/* Facebook */}
-        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-blue-500 cursor-pointer  ">
+        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-blue-500 cursor-pointer hover:translate-1">
           <a href="https://www.facebook.com/souledstore/">
             <FaFacebookF className="text-white text-lg" />
           </a>
         </div>
 
         {/* Instagram */}
-        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-pink-400 cursor-pointer">
+        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-pink-400 cursor-pointer hover:translate-1">
           <a href="https://www.instagram.com/TheSouledStore/">
             <FaInstagram className="text-white text-lg" />
           </a>
         </div>
 
         {/* Snapchat */}
-        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-400 cursor-pointer">
+        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-yellow-400 cursor-pointer hover:translate-1">
           <a href="https://www.snapchat.com/@thesouledstore">
             <FaSnapchatGhost className="text-white text-lg" />
           </a>
         </div>
 
         {/* Twitter */}
-        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-black cursor-pointer">
+        <div className="w-6 h-6 flex items-center justify-center rounded-full bg-black cursor-pointer hover:translate-1">
           <a href="https://x.com/TheSouledStore">
             <FaTwitter className="text-white text-lg" />
           </a>

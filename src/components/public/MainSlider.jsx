@@ -85,7 +85,7 @@ function MainSlider({ activeCategory }) {
       </button>
     </div>
 
-    {/* Dots BELOW image */}
+    {/* Dots */}
     <div className="flex justify-center gap-2 mt-3 sm:mt-4">
       {images.map((_, idx) => (
         <div

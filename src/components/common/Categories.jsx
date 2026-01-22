@@ -3,8 +3,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
+import { useNavigate } from "react-router-dom";
 
 const Categories = ({ data = [], columns = 4 }) => {
+  const navigate = useNavigate();
+
+  const goToPage = (slug) => {
+    navigate(`/category/${slug}`);
+  };
+
   const chunkSize = 4; // mobile stays 2x2 per slide
   const slides = [];
 
@@ -29,6 +36,7 @@ const Categories = ({ data = [], columns = 4 }) => {
                 <img
                   src={item.img}
                   alt={item.name}
+                  onClick={() => goToPage(item.slug)}   // ✅ ADDED
                   className="w-full object-contain transition-transform duration-300 ease-out hover:scale-110 cursor-pointer"
                 />
               </div>
@@ -53,6 +61,7 @@ const Categories = ({ data = [], columns = 4 }) => {
                       <img
                         src={item.img}
                         alt={item.name}
+                        onClick={() => goToPage(item.slug)} // ✅ ADDED
                         className="w-full object-contain transition-transform duration-300 ease-out hover:scale-110 cursor-pointer"
                       />
                     </div>
