@@ -119,7 +119,7 @@ const CategoryPage = () => {
                 </div>
               </div>
             </div>
-
+              
             {/* Products Grid */}
             <div className="flex-1 px-4 md:px-6 py-5 flex justify-center">
               {sortedProducts.length > 0 ? (
