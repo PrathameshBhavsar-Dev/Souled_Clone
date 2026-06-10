@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import mens1 from '../../assets/mens (1).jpg';
 import mens2 from '../../assets/mens (2).jpg';
 import mens3 from '../../assets/mens (3).jpg';
@@ -29,7 +30,22 @@ import shopbystyle3 from '../../assets/shopbystyle (3).jpg';
 import shopbystyle4 from '../../assets/shopbystyle (4).jpg';
 
 const SideBar = ({ isOpen, onClose }) => {
-  const [activeTab, setActiveTab] = useState('MEN');
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  // Route detection function to map pathname to tab
+  const detectTabFromRoute = () => {
+    const pathname = location.pathname;
+    if (pathname.includes('/women')) {
+      return 'WOMEN';
+    } else if (pathname.includes('/sneakers')) {
+      return 'SNEAKERS';
+    } else {
+      return 'MEN';
+    }
+  };
+
+  const [activeTab, setActiveTab] = useState(detectTabFromRoute());
   const [shopAllOpen, setShopAllOpen] = useState(false);
   const [categoriesOpen, setCategoriesOpen] = useState(false);
   const [shopByCategoryOpen, setShopByCategoryOpen] = useState(false);
@@ -157,6 +173,13 @@ const SideBar = ({ isOpen, onClose }) => {
     document.body.style.overflow = isOpen ? "hidden" : "auto";
   }, [isOpen]);
 
+  // Update activeTab when sidebar opens or route changes
+  useEffect(() => {
+    if (isOpen) {
+      setActiveTab(detectTabFromRoute());
+    }
+  }, [isOpen, location.pathname]);
+
   return (
     <>
       {isOpen && (
@@ -178,7 +201,7 @@ const SideBar = ({ isOpen, onClose }) => {
         {/* Header */}
         <div className="p-4 border-b flex h-25">
           <img src={mainlogo} alt="Main Logo" />
-          <button className="self-center border border-b rounded py-2 text-center text-gray-800 h-10 px-4 ml-auto hover:border-teal-500 hover:text-teal-600 transition-all">
+          <button onClick={() => { onClose(); navigate('/login'); }} className="self-center border border-b rounded py-2 text-center text-gray-800 h-10 px-4 ml-auto hover:border-teal-500 hover:text-teal-600 transition-all">
             Log In/Register
           </button>
         </div>

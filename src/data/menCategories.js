@@ -12,16 +12,16 @@ import socks from "../assets/Categories/men/Sockes-laces.png";
 import shorts from "../assets/Categories/men/Shorts-boxers.png";
 
 export const menCategories = [
-  { name: "T-shirt", img: tshirtImg },
-  { name: "Shirts", img: shirtImg },
-  { name: "Winter Wear", img: winterImg },
-  { name: "Joggers", img: joggersImg },
-  { name: "Jeans", img: jeansImg },
-  { name: "Polos", img: polosImg },
-  { name: "Pants", img: pantImg },
-  { name: "Sneakers", img: sneakersImg },
-  { name: "Backpacks", img: backpacksImg },
-  { name: "Accessories", img: accessoriesImg },
-  { name: "Socks", img: socks },
-  { name: "Shorts & Boxers", img: shorts },
+  { name: "T-shirt", img: tshirtImg, slug: "t-shirt" },
+  { name: "Shirts", img: shirtImg, slug: "shirts" },
+  { name: "Winter Wear", img: winterImg, slug: "winter-wear" },
+  { name: "Joggers", img: joggersImg, slug: "joggers" },
+  { name: "Jeans", img: jeansImg, slug: "jeans" },
+  { name: "Polos", img: polosImg, slug: "polos" },
+  { name: "Pants", img: pantImg, slug: "pants" },
+  { name: "Sneakers", img: sneakersImg, slug: "sneakers" },
+  { name: "Backpacks", img: backpacksImg, slug: "backpacks" },
+  { name: "Accessories", img: accessoriesImg, slug: "accessories" },
+  { name: "Socks", img: socks, slug: "socks" },
+  { name: "Shorts & Boxers", img: shorts, slug: "shorts-boxers" },
 ];
