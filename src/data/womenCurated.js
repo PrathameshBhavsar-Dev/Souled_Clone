@@ -1,8 +1,9 @@
 
-import kawali  from "../assets/curated/womenCurated/kawali.png";
-import concert from "../assets/curated/womenCurated/concertfit.png";
-import office from "../assets/curated/womenCurated/offceedit.png"
-import trending from "../assets/curated/womenCurated/trending.png";
+// import kawali  from "../assets/curated/womenCurated/kawali.png";
+import kawali from "../assets/Curated/womenCurated/kawali.png"
+import concert from "../assets/Curated/womenCurated/concertfit.png";
+import office from "../assets/Curated/womenCurated/offceedit.png"
+import trending from "../assets/Curated/womenCurated/trending.png";
 
 
 
