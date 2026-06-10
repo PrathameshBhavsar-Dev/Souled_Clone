@@ -1,9 +1,9 @@
 import React from "react";
 
-import img1 from "../../../assets/homegrown/1.png";
-import img2 from "../../../assets/homegrown/2.png";
-import img3 from "../../../assets/homegrown/3.png";
-import img4 from "../../../assets/homegrown/4.png";
+import img1 from "../../../assets/Homegrown/1.png";
+import img2 from "../../../assets/Homegrown/2.png";
+import img3 from "../../../assets/Homegrown/3.png";
+import img4 from "../../../assets/Homegrown/4.png";
 
 const data = [
   { img: img1, text: "WE'VE COLLABORATED WITH TRILOK" },
